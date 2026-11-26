@@ -20,7 +20,7 @@ const projects = [
       'Benchmarked four architectures for growth-stage classification: DenseNet121 (98.73%), EfficientNet (~92.7%), custom CNN (~92.5%) and LNN (~80.8%).',
       'End-to-end pipeline (sensor → cloud → inference → dashboard) ran continuously during testing without manual intervention.'
     ],
-    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumar-be/AquaNexus---Plant-growth-monitoring-in-Automated-Aquaponic-System' }]
+    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumarsiwach/AquaNexus---Plant-growth-monitoring-in-Automated-Aquaponic-System' }]
   },
   {
     id: 'tlms',
@@ -39,7 +39,7 @@ const projects = [
       'Working-day calculation that skips holidays, semester leave limits and automatic conversion to unpaid leave.',
       'Full action history on every application, plus PDF and Excel reports.'
     ],
-    links: []
+    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumarsiwach/Leave-Management-System' }]
   },
   {
     id: 'jobportal',
@@ -58,7 +58,7 @@ const projects = [
       'Resume and certificate uploads through Multer with file type and size validation.',
       'Selenium WebDriver + TestNG regression suite across login, posting, applying and status updates, increasing test coverage by 30%.'
     ],
-    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumar-be/Job-Project' }]
+    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumarsiwach/Job-Portal' }]
   },
   {
     id: 'wheat',
@@ -95,7 +95,7 @@ const projects = [
       'A 15-HP boss with multiple phases, radial shots, beam attacks and a health bar.',
       'Custom explosion animations, score and lives system, and PNG textures loaded with stb_image.'
     ],
-    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumar-be/Space-Shooter-Game-2D' }]
+    links: [{ label: 'View on GitHub', href: 'https://github.com/manishkumarsiwach/Space-Shooter-Game-2D' }]
   }
 ];
 
@@ -121,6 +121,7 @@ grid.innerHTML = projects.map(p => `
         <ul class="chips chips-sm">${p.tags.slice(0, 4).map(t => `<li>${t}</li>`).join('')}</ul>
       </div>
     </button>
+    ${p.links.length ? `<a class="card-gh" href="${p.links[0].href}" target="_blank" rel="noopener" aria-label="${p.title} on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 00-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0012 .5z"/></svg>GitHub</a>` : ''}
   </li>`).join('');
 
 /* ---------- Project filter ---------- */
@@ -152,7 +153,7 @@ function openModal(id) {
     <ul class="chips">${p.tags.map(t => `<li>${t}</li>`).join('')}</ul>
     ${p.links.length
       ? `<div class="modal-links">${p.links.map(l => `<a class="btn btn-primary" href="${l.href}" target="_blank" rel="noopener">${l.label} →</a>`).join('')}</div>`
-      : `<p class="form-note">Source code is private. Happy to walk through it in an interview.</p>`}
+      : `<p class="form-note">Code isn't public for this project. Happy to walk through it in an interview.</p>`}
   `;
   modal.hidden = false;
   document.body.classList.add('no-scroll');

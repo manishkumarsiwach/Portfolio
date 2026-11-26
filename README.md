@@ -2,7 +2,7 @@
 
 Personal portfolio website: about, resume, projects and contact, in a single static page (HTML, CSS and vanilla JavaScript, no build step).
 
-**Live site:** https://manishkumar-be.github.io/Portfolio/
+**Live site:** https://manishkumarsiwach.github.io/Portfolio/
 
 ## Sections
 - **Photo**: replace `assets/images/profile.jpg` with your own photo (square, keep the same file name)
